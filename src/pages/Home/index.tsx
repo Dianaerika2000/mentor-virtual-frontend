@@ -1,4 +1,4 @@
-import { Avatar } from "../../features/mentor/components/MentorAvatar/Avatar";
+import { Avatar } from "@/features/mentor/components/Avatar";
 
 
 // export function Home() {

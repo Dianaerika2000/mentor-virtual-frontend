@@ -4,7 +4,5 @@ export interface MentorMessage {
 }
 
 export interface MentorAvatarProps {
-  animationSrc?: string 
-  message?: string
   showBubble?: boolean
 }

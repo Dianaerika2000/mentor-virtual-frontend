@@ -1,13 +1,12 @@
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
+import { Avatar } from '../Avatar'
 import { MentorBubble } from '../MentorBubble'
 import { useMentor } from '../../hooks/useMentor'
 import type { MentorAvatarProps } from '../../types/mentor.types'
 
-export function MentorAvatar({ animationSrc, showBubble = true }: MentorAvatarProps) {
+export function MentorAvatar({ showBubble = true }: MentorAvatarProps) {
   const { currentMessage, isVisible, toggleBubble } = useMentor()
 
   return (
-    // Contenedor flotante — fixed en esquina inferior derecha
     <div className="fixed bottom-6 right-4 z-50 flex flex-col items-end">
 
       {/* Burbuja de mensaje */}
@@ -30,24 +29,7 @@ export function MentorAvatar({ animationSrc, showBubble = true }: MentorAvatarPr
         "
         aria-label="Mentor virtual"
       >
-        {animationSrc ? (
-          <DotLottieReact
-            src={animationSrc}
-            loop
-            autoplay
-            style={{ width: '100%', height: '100%' }}
-          />
-        ) : (
-          // Placeholder hasta que tu compañera traiga el archivo
-          <div className="
-            w-full h-full
-            bg-linear-to-br from-indigo-400 to-purple-500
-            flex items-center justify-center
-            text-3xl
-          ">
-            🤖
-          </div>
-        )}
+        <Avatar />
       </button>
     </div>
   )
